@@ -1,8 +1,5 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\UserController;
 
-abstract class Controller
-{
-    //
-}
+Route::get('/components/home'. [UserController::class, 'welcome']);
