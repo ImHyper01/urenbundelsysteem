@@ -51,7 +51,7 @@
             </ul> 
         </nav>
     </header>
-    <content class="grid grid-cols-3 max-w-9xl mx-auto mt-6">
+    <content class="grid grid-cols-3 max-w-9xl mx-auto mt-10">
         <main class="col-span-2 mx-[10%] ">
            <div class="flex bg-blue-200 relative mb-2 pb-1 h-250 shadow-xl rounded-xl p-5 ">
                 <div class="mx-auto">
@@ -59,19 +59,66 @@
                     <div>Dashboard</div>
 
                     <section class="grid grid-cols-2 gap-10 mx-auto mt-6 justify-center align-center">
-                    
-                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">1</section>
-                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">2</section>
-                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">3</section>
-                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">4</section>
+
+    <!-- Bundel Overzicht -->
+    <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">
+        <h2 class="font-bold text-xl mb-2">Uren Bundel</h2>
+        <p class="text-gray-600">Totaal uren: <span class="font-semibold">40</span></p>
+        <p class="text-gray-600">Nog beschikbaar: <span class="font-semibold text-green-600">28</span></p>
+        <div class="w-full bg-gray-200 rounded-full h-3 mt-3">
+            <div class="bg-blue-500 h-3 rounded-full" style="width: 70%"></div>
+        </div>
+    </section>
+                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">
+                            <h2 class="font-bold text-xl mb-2">Verbruik deze maand</h2>
+                            <p class="text-gray-600">Ingezet: <span class="font-semibold">12 uur</span></p>
+                            <p class="text-gray-600">Nog resterend: <span class="font-semibold">28 uur</span></p>
+                            <p class="text-sm text-gray-400 mt-2">Laatst geregistreerd: 2 dagen geleden</p>
+                        </section>
+
+                        
+                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">
+                            <h2 class="font-bold text-xl mb-2">Facturatie</h2>
+                            <p class="text-gray-600">Bundel start: <span class="font-semibold">01-09-2025</span></p>
+                            <p class="text-gray-600">Einddatum: <span class="font-semibold">30-09-2025</span></p>
+                            <p class="text-gray-600">Prijs bundel: <span class="font-semibold">€1200</span></p>
+                            <button class="mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg shadow">Factuur bekijken</button>
+                        </section>
+
+                        
+                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">
+                            <h2 class="font-bold text-xl mb-2">Acties</h2>
+                            <button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow w-full mb-2">Nieuw uur loggen</button>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow w-full mb-2">Rapport downloaden</button>
+                            <button class="bg-gray-500 text-white px-4 py-2 rounded-lg shadow w-full">Support</button>
+                        </section>
 
                     </section>
                 </div>
            </div>
         </main>
-        <aside class="bg-blue-200 col-span-1 mr-[20%]">
-            side bar
+
+        <aside class="bg-blue-200 col-span-1 mr-[20%] rounded-xl shadow-xl">
+            <content class="grid grid-cols-2">
+                <section class="flex col-span-2 gap-20 p-10 mx-[10%] relative bg-white w-137 h-30 mt-10 shadow-xl rounded-lg">
+                    section 1
+                </section>
+
+                <section class="flex col-span-2 gap-20 p-10 mx-[10%] relative bg-white w-137 h-30 mt-10 shadow-xl rounded-lg">
+                    section 2
+                </section>
+
+                <section class="flex col-span-2 gap-20 p-10 mx-[10%] relative bg-white w-137 h-30 mt-10 shadow-xl rounded-lg">
+                    section 3
+                </section> 
+
+                <section class="flex col-span-2 gap-20 p-10 mx-[10%] relative bg-white w-137 h-30 mt-10 shadow-xl rounded-lg">
+                    section 4
+                </section>
+
+            </content>
         </aside>
+
     </content>
 </body>
 </html>
