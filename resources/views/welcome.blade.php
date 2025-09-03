@@ -11,9 +11,11 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Alpine.js (CDN voor gemak) -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <style type="text/tailwindcss">
+
         .navitems>li>a {
             @apply bg-green-500 text-black hover:bg-green-200 py-3 px-6 rounded
         }
@@ -27,23 +29,49 @@
     </logo>
 
         <nav>
-            <ul class="flex items-center gap-5" >
+            <ul class="flex items-center gap-5 relative" >
                 <li><a class="bg-green-500 text-black hover:bg-green-200 py-5 px-8 rounded" href="/uren">uren</a></li>
                 <li><a class="bg-green-500 text-black hover:bg-green-200 py-5 px-8 rounded" href="/klanten">klanten</a></li>
 
-                <li><a class="flex items-center gap-2 bg-green-500 text-black hover:bg-green-200 py-3 px-6 rounded" href="">
-
+                <li x-data="{ dropdownOpen: false }" >
+                    
+                <a @click="dropdownOpen = !dropdownOpen" @click.away="dropdownOpen = false" class="flex items-center gap-2 bg-green-500 text-black hover:bg-green-200 py-3 px-6 rounded cursor-pointer select-none" >
                 <img class="h-8 rounded-full object-cover" src="https://img.icons8.com/color/48/test-account.png" alt="test-account"/>
                     mijn profiel
                 <img class="w-4" src="https://img.icons8.com/ios/50/expand-arrow--v2.png" alt="expand-arrow--v2"/>
-                </a></li>
+                </a>
+                    <div x-show="dropdownOpen" x-cloak class="absolute right-0 bg-white text-black shadow rounded-lg w-40 p-2 z-20">
+                        <ul class="hoverlist">
+                            <li><a href="">Mijn profiel</a></li>
+                            <li><a href="">instellingen</a></li>
+                            <li><a href="">Log uit</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul> 
         </nav>
     </header>
-    <main>
-        <div class="p-10">
-            main content van de website
-        </div>
-    </main>
+    <content class="grid grid-cols-3 max-w-9xl mx-auto mt-6">
+        <main class="col-span-2 mx-[10%] ">
+           <div class="flex bg-blue-200 relative mb-2 pb-1 h-250 shadow-xl rounded-xl p-5 ">
+                <div class="mx-auto">
+                    <h1 class="font-bold text-3xl">Hallo, John</h1>
+                    <div>Dashboard</div>
+
+                    <section class="grid grid-cols-2 gap-10 mx-auto mt-6 justify-center align-center">
+                    
+                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">1</section>
+                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">2</section>
+                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">3</section>
+                        <section class="bg-white p-6 w-140 h-100 rounded-xl shadow-xl ">4</section>
+
+                    </section>
+                </div>
+           </div>
+        </main>
+        <aside class="bg-blue-200 col-span-1 mr-[20%]">
+            side bar
+        </aside>
+    </content>
 </body>
 </html>
